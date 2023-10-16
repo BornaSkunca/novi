@@ -1,0 +1,42 @@
+
+def recursion(n):
+    if n==1:
+        return 1
+
+    return n*recursion(n-1)
+
+def fib(n):
+    if n==0 or n==1:
+        return n
+
+    return fib(n-1)+fib(n-2);
+
+def sum_liste(list):
+
+  if len(list)==1:
+      return list[0]
+# dvotocje znaci da se index krece od 1 do kraja , da je 1:5 bilo bi od 1 do 5
+  return list[0]+sum_liste(list[1:])
+
+def sum_liste2(list):
+    total=0
+    for element in list:
+        if type(element) == type([]):
+            total = total + sum_liste2(element)
+        else:
+            total = total + element
+
+    return total
+
+
+if __name__ == '__main__':
+
+    print(recursion(5))
+    print(fib(6))
+    lista=[1,4,88,12,16,60,43]
+    print(sum_liste(lista))
+    print(sum_liste2([1, 2, [3, 4], [5, 6]]))
+
+
+
+

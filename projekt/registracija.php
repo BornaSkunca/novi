@@ -167,7 +167,7 @@
     </div>
 
     <footer>
-        <h2 class="naslov">Frankfurter Allgemeine</h2>
+        <h2 class="naslov">Borna Škunca</h2>
     </footer>
     
     
